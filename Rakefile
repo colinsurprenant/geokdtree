@@ -17,7 +17,7 @@ task :make => [:clean] do
     ruby jruby? ? "-Xcext.enabled=true extconf.rb" : "extconf.rb"
     sh "make"
   end
-  cp "ext/geokdtree/geokdtree.bundle", "lib/geokdtree"
+  cp "ext/geokdtree/geokdtree.bundle", "lib/"
 end
 
 CLEAN.include('ext/**/*{.o,.log,.so,.bundle}')

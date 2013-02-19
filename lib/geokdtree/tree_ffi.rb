@@ -1,8 +1,6 @@
 require 'ffi'
 
 module Geokdtree::C
-  ffi_lib File.dirname(__FILE__) + "/" + (FFI::Platform.mac? ? "geokdtree.bundle" : FFI.map_library_name("geokdtree"))
-
   # /* create a kd-tree for "k"-dimensional data */
   # struct kdtree *kd_create(int k);
   attach_function "kd_create", "kd_create", [:int], :pointer
