@@ -23,6 +23,18 @@ Or install it yourself as:
 
     $ gem install geokdtree
 
+## JRuby Notes
+
+if the gem installation fails with the following error message, this is because JRuby disabled native extensions by default. 
+```
+Gem::Installer::ExtensionBuildError: ERROR: Failed to build gem native extension
+```
+
+To fix this simply set the following JRuby runtime option
+``` sh
+$ export JRUBY_OPTS=-Xcext.enabled=true
+```
+
 ## Usage
 
 ``` ruby
