@@ -12,9 +12,14 @@ task :spec do
   RSpec::Core::RakeTask.new
 end
 
-FFI::Compiler::CompileTask.new('ext/geokdtree/geokdtree') do |c|
-  c.have_library?('pthread')
+desc "compiler tasks"
+namespace "ffi-compiler" do
+  FFI::Compiler::CompileTask.new('ext/geokdtree/geokdtree') do |c|
+    c.have_library?('pthread')
+    c.cflags << "-DUSE_LIST_NODE_ALLOCATOR"
+  end
 end
+task :compile => ["ffi-compiler:default"]
 
 CLEAN.include('ext/**/*{.o,.log,.so,.bundle}')
 CLEAN.include('lib/**/*{.o,.log,.so,.bundle}')

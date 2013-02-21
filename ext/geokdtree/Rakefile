@@ -2,4 +2,5 @@ require 'ffi-compiler/compile_task'
 
 FFI::Compiler::CompileTask.new('geokdtree') do |c|
   c.have_library?('pthread')
+  c.cflags << "-DUSE_LIST_NODE_ALLOCATOR"
 end
