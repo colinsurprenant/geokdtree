@@ -1,10 +1,10 @@
 require 'ffi'
+require 'ffi-compiler/loader'
 
 module Geokdtree
   module C
     extend FFI::Library
-    
-  	ffi_lib File.dirname(__FILE__) + "/" + (FFI::Platform.mac? ? "geokdtree.bundle" : FFI.map_library_name("geokdtree"))
+    ffi_lib FFI::Compiler::Loader.find('geokdtree')
   end
 end
 
