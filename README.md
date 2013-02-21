@@ -1,4 +1,4 @@
-# Ruby/FFI Geokdtree v0.1.0
+# Geokdtree v0.2.0
 
 Ruby & JRuby gem with a fast **k-d tree** C implementation using FFI bindings with support for latitude/longitude and **geo distance range search**.
 
@@ -6,33 +6,21 @@ A [k-d tree](https://en.wikipedia.org/wiki/K-d_tree) is a space-partitioning dat
 
 ## Installation
 
-Tested on OSX 10.8.2 with
-- MRI Ruby 1.9.3 p362
-- MRI Ruby 1.9.3 p385
+Tested on **OSX 10.8.2** and **Linux 12.10** with
+- MRI Ruby 1.9.3 p362, 1.9.3 p385
 - JRuby 1.7.2 (1.9.3 p327)
 
 Add this line to your application's Gemfile:
-
+```
     gem 'geokdtree'
-
+```
 And then execute:
-
+```
     $ bundle
-
+```
 Or install it yourself as:
-
+```
     $ gem install geokdtree
-
-## JRuby Notes
-
-if the gem installation fails with the following error message, this is because JRuby disabled native extensions by default. 
-```
-Gem::Installer::ExtensionBuildError: ERROR: Failed to build gem native extension
-```
-
-To fix this simply set the following JRuby runtime option
-``` sh
-$ export JRUBY_OPTS=-Xcext.enabled=true
 ```
 
 ## Usage
@@ -103,12 +91,20 @@ $ export JRUBY_OPTS=-Xcext.enabled=true
   puts(d.inspect) # => 403
 ```
 
+## Developement
+
+1. Fort it
+2. Install gems `$ bundle install`
+3. Compile lib `$ rake compile`
+4. Run specs `$ rake spec`
+5. Clean compiler generated files `$ rake clean`
+
 ## Contributing
 
 1. Fork it
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
+2. Create your feature branch `git checkout -b my-new-feature`
+3. Commit your changes `git commit -am 'Add some feature'`
+4. Push to the branch `git push origin my-new-feature`
 5. Create new Pull Request
 
 ## Credits
@@ -118,4 +114,4 @@ $ export JRUBY_OPTS=-Xcext.enabled=true
 Colin Surprenant, [@colinsurprenant](http://twitter.com/colinsurprenant), [http://github.com/colinsurprenant](http://github.com/colinsurprenant), colin.surprenant@gmail.com
 
 ## License
-Ruby/FFI Geokdtree is distributed under the Apache License, Version 2.0. 
+Geokdtree is distributed under the Apache License, Version 2.0. 
