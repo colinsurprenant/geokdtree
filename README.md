@@ -1,4 +1,6 @@
-# Geokdtree v0.2.0
+# Geokdtree v0.2.1
+
+[![build status](https://secure.travis-ci.org/colinsurprenant/geokdtree.png)](http://travis-ci.org/colinsurprenant/geokdtree)
 
 Ruby & JRuby gem with a fast **k-d tree** C implementation using FFI bindings with support for latitude/longitude and **geo distance range search**.
 
@@ -108,7 +110,7 @@ Or install it yourself as:
 5. Create new Pull Request
 
 ## Credits
-- [John Tsiombikas](http://nuclear.mutantstargoat.com/) for writing the [original C kdtree](https://code.google.com/p/kdtree/).
+- Based on the [kdtree C code](https://code.google.com/p/kdtree/) by [John Tsiombikas](http://nuclear.mutantstargoat.com/).
 
 ## Author
 Colin Surprenant, [@colinsurprenant](http://twitter.com/colinsurprenant), [http://github.com/colinsurprenant](http://github.com/colinsurprenant), colin.surprenant@gmail.com

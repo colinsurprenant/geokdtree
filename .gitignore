@@ -15,3 +15,9 @@ spec/reports
 test/tmp
 test/version_tmp
 tmp
+.ruby-version
+.vagrant
+Vagrantfile
+ext/geokdtree/x86_64-darwin/
+switch.sh
+vendor/
